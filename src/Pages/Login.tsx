@@ -1,0 +1,24 @@
+import { Avatar, Box, Paper, TextField, Typography } from '@mui/material';
+
+import LockIcon from '@mui/icons-material/Lock';
+
+const Login = () => {
+  return (
+    <Paper elevation={14}>
+      <Box padding={2}>
+        <Box display="flex" justifyContent="center" mb={1}>
+          <Avatar>
+            <LockIcon color="action" />
+          </Avatar>
+        </Box>
+        <Typography variant="h6" textAlign="center" mb={2}>
+          Sign In
+        </Typography>
+        <TextField label="Email Address" sx={{ mb: 2 }} fullWidth required />
+        <TextField type="password" label="Password" sx={{ mb: 2 }} fullWidth required />
+      </Box>
+    </Paper>
+  );
+};
+
+export default Login;
