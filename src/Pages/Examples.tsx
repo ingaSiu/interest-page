@@ -11,7 +11,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { data } from '../Data/data';
-import styled from 'styled-components';
 
 type Props = {};
 
@@ -59,7 +58,18 @@ const Examples = (props: Props) => {
         </Box>
       </div>
 
-      <TableWrapper>
+      <Box
+        sx={{
+          width: 650,
+          mt: 4,
+          ml: 4,
+          backgroundColor: 'palette.primary.light',
+          '&:hover': {
+            backgroundColor: 'palette.primary.main',
+            opacity: [0.9, 0.8, 0.7],
+          },
+        }}
+      >
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -85,17 +95,9 @@ const Examples = (props: Props) => {
             </TableBody>
           </Table>
         </TableContainer>
-      </TableWrapper>
+      </Box>
     </>
   );
 };
 
 export default Examples;
-
-const TableWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  width: 800px;
-  margin-top: 12px;
-`;
