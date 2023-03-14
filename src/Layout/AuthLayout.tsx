@@ -10,7 +10,7 @@ const AuthLayout = ({ children }: PropsWithChildren) => {
           Sign up to get your ideas
         </Typography>
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={4} p={1}>
         {children}
       </Grid>
       <Grid item xs={1} />
