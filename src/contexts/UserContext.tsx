@@ -1,6 +1,6 @@
 import { PropsWithChildren, createContext } from 'react';
 
-import { User } from '../types/user';
+import { User } from '../Types/user';
 import { useLocalStorage } from '../hooks/localStorage';
 
 const UserContext = createContext<{

@@ -4,11 +4,11 @@ import LockIcon from '@mui/icons-material/Lock';
 
 const Login = () => {
   return (
-    <Paper elevation={24}>
+    <Paper elevation={14}>
       <Box padding={2}>
         <Box display="flex" justifyContent="center" mb={1}>
           <Avatar>
-            <LockIcon />
+            <LockIcon color="action" />
           </Avatar>
         </Box>
         <Typography variant="h6" textAlign="center" mb={2}>
