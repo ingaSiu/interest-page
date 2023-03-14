@@ -1,7 +1,16 @@
-type Props = {};
+import { Key } from 'react';
+import { useImages } from '../hooks/images';
 
-const Home = (props: Props) => {
-  return <div>Home</div>;
+const Home = () => {
+  const { data } = useImages();
+  const images = data || [];
+  return (
+    <div>
+      {images.map((image) => (
+        <img key={image.id} src={image.previewURL} />
+      ))}
+    </div>
+  );
 };
 
 export default Home;
