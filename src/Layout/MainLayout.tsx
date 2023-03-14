@@ -1,10 +1,6 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 
-type MainLayoutProps = {
-  children: ReactNode;
-};
-
-const MainLayout = ({ children }: MainLayoutProps) => {
+const MainLayout = ({ children }: PropsWithChildren) => {
   return <div>{children}</div>;
 };
 
