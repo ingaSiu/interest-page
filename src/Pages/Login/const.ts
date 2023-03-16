@@ -10,6 +10,6 @@ export const loginFormInitialValues: User = {
 };
 
 export const loginValidationSchema: Yup.ObjectSchema<User> = Yup.object().shape({
-  email: Yup.string().email().required(requiredField),
-  password: Yup.string().required(emailValidation),
+  email: Yup.string().email(emailValidation).required(requiredField),
+  password: Yup.string().required(requiredField),
 });

@@ -2,7 +2,7 @@ import { AuthLayoutRoutes, MainLayoutRoutes } from './routeTypes';
 
 import AuthLayout from '../Layout/AuthLayout';
 import Examples from '../Pages/Examples';
-import Home from '../Pages/Home';
+import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import MainLayout from '../Layout/MainLayout';
 import PinPage from '../Pages/PinPage';
