@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '../../hooks/store';
 
-import Searchbar from './SearchBar';
+import SearchBar from './SearchBar';
 import { onChange } from '../../store/searchSlice';
 
 const ImageSearchbar = () => {
@@ -11,6 +11,6 @@ const ImageSearchbar = () => {
     dispatch(onChange(value));
   };
 
-  return <Searchbar value={value} setValue={handleChangeSearch} />;
+  return <SearchBar value={value} setValue={handleChangeSearch} />;
 };
 export default ImageSearchbar;

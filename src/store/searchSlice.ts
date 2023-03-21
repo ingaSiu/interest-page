@@ -10,6 +10,8 @@ const initialState: SearchState = {
   value: '',
 };
 
+// reducers: musu veiksmai
+
 export const searchSlice = createSlice({
   name: 'search',
   initialState,
