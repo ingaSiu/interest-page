@@ -23,7 +23,7 @@ const Home = () => {
         setItems([]);
       }
     }, 1000);
-  }, [page, searchValue]);
+  }, [searchValue]);
 
   // sujungiam du masyvus: sena ir nauja
   useEffect(() => {
