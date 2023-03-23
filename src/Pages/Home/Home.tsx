@@ -5,24 +5,22 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { PixabayImage } from '../../Types/images';
 import { uniqBy } from 'lodash';
 import { useAppSelector } from '../../hooks/store';
+import useDebounce from '../../hooks/useDebounce';
 import { useImages } from '../../hooks/images';
 
 const Home = () => {
   const searchValue = useAppSelector((state) => state.search.value);
-  const [debouncedSearch, setDebouncedSearch] = useState('');
+  const debouncedSearch = useDebounce(searchValue);
   const [page, setPage] = useState(1);
   const [items, setItems] = useState<PixabayImage[]>([]);
   const { data, isLoading } = useImages(page, debouncedSearch);
   const images = data || [];
 
   useEffect(() => {
-    setTimeout(() => {
-      if (searchValue) {
-        setDebouncedSearch(searchValue);
-        setPage(1);
-        setItems([]);
-      }
-    }, 1000);
+    if (searchValue) {
+      setPage(1);
+      setItems([]);
+    }
   }, [searchValue]);
 
   // sujungiam du masyvus: sena ir nauja
